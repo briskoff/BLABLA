@@ -71,8 +71,8 @@ end
 
 local requestsDisabled = true --getgenv and getgenv().DISABLE_RAYFIELD_REQUESTS
 local InterfaceBuild = '3K3W'
-local Release = "Build 1.68"
-local RayfieldFolder = "Rayfield"
+local Release = "Astro UI"
+local RayfieldFolder = "Astro"
 local ConfigurationFolder = RayfieldFolder.."/Configurations"
 local ConfigurationExtension = ".rfld"
 local settingsTable = {
@@ -1506,14 +1506,14 @@ local function createSettings(window)
 		return
 	end
 
-	local newTab = window:CreateTab('Astro Settings', 0, true)
+	local newTab = window:CreateTab('Rayfield Settings', 0, true)
 
-	if TabList['Astro Settings'] then
-		TabList['Astro Settings'].LayoutOrder = 1000
+	if TabList['Rayfield Settings'] then
+		TabList['Rayfield Settings'].LayoutOrder = 1000
 	end
 
-	if Elements['Astro Settings'] then
-		Elements['Astro Settings'].LayoutOrder = 1000
+	if Elements['Rayfield Settings'] then
+		Elements['Rayfield Settings'].LayoutOrder = 1000
 	end
 
 	-- Create sections and elements
@@ -1564,7 +1564,7 @@ end
 
 
 function RayfieldLibrary:CreateWindow(Settings)
-	print('Lanch Astro Softwares 100%')
+	print('creating window')
 	if Rayfield:FindFirstChild('Loading') then
 		if getgenv and not getgenv().rayfieldCached then
 			Rayfield.Enabled = true
@@ -3667,7 +3667,7 @@ if Topbar:FindFirstChild('Settings') then
 				end
 			end
 
-			Elements.UIPageLayout:JumpTo(Elements['Astro Settings'])
+			Elements.UIPageLayout:JumpTo(Elements['Rayfield Settings'])
 		end)
 	end)
 
