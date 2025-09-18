@@ -23,7 +23,7 @@ end
 -- Errors with the function are caught and logged to the output
 local function loadWithTimeout(url: string, timeout: number?): ...any
 	assert(type(url) == "string", "Expected string, got " .. type(url))
-	timeout = timeout or 5
+	timeout = timeout or 1
 	local requestCompleted = false
 	local success, result = false, nil
 
